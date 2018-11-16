@@ -1,0 +1,92 @@
+extends layout
+
+block vars
+    - let title = '旅游网'
+
+block content
+    .content
+        .ic More Website Templates @ moobnn.com - February 10, 2014!
+        .container_12
+            .banners
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img1.jpg', alt='')
+                        .label
+                            .title 新西兰
+                            .price
+                                | from
+                                span $ 1.200
+                            a(href='#') 获取更多
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img2.jpg', alt='')
+                        .label
+                            .title 果阿
+                            .price
+                                | from
+                                span $ 1.500
+                            a(href='#') 获取更多
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img3.jpg', alt='')
+                        .label
+                            .title 法国
+                            .price
+                                | from
+                                span $ 1.600
+                            a(href='#') 获取更多
+                .clear
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img4.jpg', alt='')
+                        .label
+                            .title 加拿大
+                            .price
+                                | from
+                                span $ 2000
+                            a(href='#') 获取更多
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img5.jpg', alt='')
+                        .label
+                            .title 土耳其
+                            .price
+                                | from
+                                span $ 1.500
+                            a(href='#') 获取更多
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img6.jpg', alt='')
+                        .label
+                            .title 埃及
+                            .price
+                                | from
+                                span $ 1.500
+                            a(href='#') 获取更多
+                .clear
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img7.jpg', alt='')
+                        .label
+                            .title 日本
+                            .price
+                                | from
+                                span $ 1000
+                            a(href='#') 获取更多
+                .grid_4
+                    .banner
+                        img(src='/public/images/page2_img8.jpg', alt='')
+                        .label
+                            .title 巴西
+                            .price
+                                | from
+                                span $ 1.700
+                            a(href='#') 获取更多
+
+block script
+    script.
+        $(function (){
+            $('#bookingForm').bookingForm({
+            ownerEmail: '#'
+            });
+        })

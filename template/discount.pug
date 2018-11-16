@@ -1,0 +1,80 @@
+extends layout
+
+block vars
+    - let title = '旅游网'
+
+block content
+
+    .content
+        .ic More Website Templates @ moobnn.com - February 10, 2014!
+        .container_12
+            .grid_8
+                h3 特别优惠
+                .block2
+                    img.img_inner.fleft(src='/public/images/page3_img1.jpg', alt='')
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') 巴塞罗那
+                        p
+                            | Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan.
+                        | Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel
+                        br
+                        a.link1(href='#') 获取更多
+                .block2
+                    img.img_inner.fleft(src='/public/images/page3_img2.jpg', alt='')
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') 莫斯科
+                        p
+                            | Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan.
+                        | Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel
+                        br
+                        a.link1(href='#') 获取更多
+                .block2
+                    img.img_inner.fleft(src='/public/images/page3_img3.jpg', alt='')
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') 泰国
+                        p
+                            | Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan.
+                        | Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel
+                        br
+                        a.link1(href='#') 获取更多
+            .grid_3.prefix_1
+                h5 选择这个国家
+                ul.list
+                    li
+                        a(href='#') 阿尔巴尼亚
+                    li
+                        a(href='#') 美属萨摩亚
+                    li
+                        a(href='#') 南极洲
+                    li
+                        a(href='#') 阿根廷
+                    li
+                        a(href='#') 亚美尼亚
+                    li
+                        a(href='#') 澳大利亚
+                    li
+                        a(href='#') 奥地利
+                    li
+                        a(href='#') 巴林
+                    li
+                        a(href='#') 巴巴多斯
+                    li
+                        a(href='#') 比利时
+                    li
+                        a(href='#') 伯利兹
+                    li
+                        a(href='#') 百慕大
+                a.link1(href='#')
+                    | 查看
+                    span.low ll
+
+block script
+    script.
+        $(function (){
+            $('#bookingForm').bookingForm({
+            ownerEmail: '#'
+            });
+        })

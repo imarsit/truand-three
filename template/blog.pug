@@ -1,0 +1,85 @@
+extends layout
+
+block vars
+    - let title = '旅游网'
+
+block content
+
+    .content
+        .ic More Website Templates @ moobnn.com - February 10, 2014!
+        .container_12
+            .grid_7
+                h3 最近的帖子
+                .blog
+                    time(datetime='2014-10-01')
+                        | 15
+                        span 2月
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') 这是一种很好的方法。
+                        | 发布的
+                        a(href='#') 管理员
+                    .clear
+                    img.img_inner(src='images/page4_img1.jpg', alt='')
+                    p
+                        | Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan.
+                    | Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibh.
+                    br
+                    a.link1(href='#') 获取更多
+                .blog
+                    time(datetime='2014-10-01')
+                        | 17
+                        span 2月
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') 埃尔·埃默特洛·努莫罗
+                        | 发布的
+                        a(href='#') 管理员
+                    .clear
+                    img.img_inner(src='images/page4_img2.jpg', alt='')
+                    p
+                        | Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan.
+                    | Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibh.
+                    br
+                    a.link1(href='#') 获取更多
+            .grid_3.prefix_1
+                h3.head1 类别
+                ul.list
+                    li
+                        a(href='#') Suspendisse massa mi 
+                    li
+                        a(href='#') Porttitor at velit id 
+                    li
+                        a(href='#') Congue adipiscing 
+                    li
+                        a(href='#') Vestibulum vitae porta 
+                    li
+                        a(href='#') Vivamus ac sodales 
+                    li
+                        a(href='#') Massa quis adipiscing 
+                    li
+                        a(href='#') Phasellus hendrerit 
+                    li
+                        a(href='#') Libero in sapien 
+                    li
+                        a(href='#') Dignissim vel imperdiet 
+                h3.head1 档案
+                ul.list
+                    li
+                        a(href='#') 2013年11月
+                    li
+                        a(href='#') 2013年10月
+                    li
+                        a(href='#') 2013年9月
+                    li
+                        a(href='#') 2013年7月
+                    li
+                        a(href='#') 2013年6月
+
+block script
+    script.
+        $(function (){
+            $('#bookingForm').bookingForm({
+            ownerEmail: '#'
+            });
+        })

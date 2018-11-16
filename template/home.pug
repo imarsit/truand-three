@@ -1,0 +1,212 @@
+extends layout
+
+block vars
+    - let title = '旅游网'
+
+block content
+    .slider_wrapper
+        #camera_wrap
+            div(data-src='/public/images/slide.jpg')
+                .caption.fadeIn
+                    h2 伦敦
+                    .price
+                        | FROM
+                        span $1000
+                    a(href='#') 获取更多
+            div(data-src='/public/images/slide1.jpg')
+                .caption.fadeIn
+                    h2 马尔代夫
+                    .price
+                        | FROM
+                        span $2000
+                    a(href='#') 获取更多
+            div(data-src='/public/images/slide2.jpg')
+                .caption.fadeIn
+                    h2 威尼斯
+                    .price
+                        | FROM
+                        span $1600
+                    a(href='#') 获取更多
+
+    .content
+        .ic More Website Templates @ moobnn.com - February 10, 2014!
+        .container_12
+            .grid_4
+                .banner
+                    img(src='/public/images/ban_img1.jpg', alt='')
+                    .label
+                        .title 巴塞罗那
+                        .price
+                            | FROM
+                            span $ 1000
+                        a(href='#') 了解更多
+            .grid_4
+                .banner
+                    img(src='/public/images/ban_img2.jpg', alt='')
+                    .label
+                        .title 果阿
+                        .price
+                            | FROM
+                            span $ 1.500
+                        a(href='#') 了解更多
+            .grid_4
+                .banner
+                    img(src='/public/images/ban_img3.jpg', alt='')
+                    .label
+                        .title 巴黎
+                        .price
+                            | FROM
+                            span $ 1.600
+                        a(href='#') 了解更多
+            .clear
+            .grid_6
+                h3 预订表格
+                form#bookingForm
+                    .fl1
+                        .tmInput
+                            input(name='Name', placeholder='姓名:', type='text', data-constraints='@NotEmpty @Required @AlphaSpecial')
+                        .tmInput
+                            input(name='Country', placeholder='国家:', type='text', data-constraints='@NotEmpty @Required')
+                    .fl1
+                        .tmInput
+                            input(name='Email', placeholder='邮箱:', type='text', data-constraints='@NotEmpty @Required @Email')
+                        .tmInput.mr0
+                            input(name='Hotel', placeholder='酒店:', type='text', data-constraints='@NotEmpty @Required')
+                    .clear
+                    strong 登记入住
+                    label.tmDatepicker
+                        input(type='text', name='Check-in', placeholder='10/05/2014', data-constraints='@NotEmpty @Required @Date')
+                    .clear
+                    strong 退房
+                    label.tmDatepicker
+                        input(type='text', name='Check-out', placeholder='20/05/2014', data-constraints='@NotEmpty @Required @Date')
+                    .clear
+                    .tmRadio
+                        p 舒适性
+                        input#tmRadio0(name='Comfort', type='radio', data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])', checked='')
+                        span 低价
+                        input#tmRadio1(name='Comfort', type='radio', data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])')
+                        span 标准
+                        input#tmRadio2(name='Comfort', type='radio', data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])')
+                        span 豪华
+                    .clear
+                    .fl1.fl2
+                        em 成人
+                        select.tmSelect.auto(name='Adults', data-class='tmSelect tmSelect2', data-constraints='')
+                            option 1
+                            option 1
+                            option 2
+                            option 3
+                        .clear
+                        em 房间
+                        select.tmSelect.auto(name='Rooms', data-class='tmSelect tmSelect2', data-constraints='')
+                            option 1
+                            option 1
+                            option 2
+                            option 3
+                    .fl1.fl2
+                        em 儿童
+                        select.tmSelect.auto(name='Children', data-class='tmSelect tmSelect2', data-constraints='')
+                            option 0
+                            option 0
+                            option 1
+                            option 2
+                    .clear
+                    .tmTextarea
+                        textarea(name='Message', placeholder='Message', data-constraints='@NotEmpty @Required @Length(min=20,max=999999)')
+                    a.btn(href='#', data-type='submit') 提交
+            .grid_5.prefix_1
+                h3 欢迎光临
+                img.img_inner.fleft(src='/public/images/page1_img1.jpg', alt='')
+                .extra_wrapper
+                    p Lorem ipsum dolor sit ere amet, consectetur ipiscin.
+                    | In mollis erat mattis neque facilisis, sit ametiol
+                .clear.cl1
+                p
+                    | 在TimePrimoStand博客上。
+                    span.col1
+                        a(href='#', rel='dofollow') 免费赠品
+                    | 找到这个细节的描述
+                p
+                    span.col1
+                        a(href='#', rel='nofollow') 旅游网站模板
+                    | 类别为您提供各种设计，完美的旅游领域的业务。
+                | 					Proin pharetra luctus diam, a scelerisque eros convallis
+                h4 Clients’ Quotes
+                blockquote.bq1
+                    img.img_inner.noresize.fleft(src='/public/images/page1_img2.jpg', alt='')
+                    .extra_wrapper
+                        p
+                            | Duis massa elit, auctor non pellentesque vel, aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibh.
+                        .alright
+                            .col1 米兰达布朗
+                            a.btn(href='#') 更多
+            .grid_12
+                h3.head1 最新消息
+            .grid_4
+                .block1
+                    time(datetime='2014-01-01')
+                        | 10
+                        span Jan
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') Aliquam nibh
+                        | Proin pharetra luctus diam, any scelerisque eros convallisumsan. Maecenas vehicula egestas
+            .grid_4
+                .block1
+                    time(datetime='2014-01-01')
+                        | 21
+                        span Jan
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') Etiam dui eros
+                        | Any scelerisque eros vallisumsan. Maecenas vehicula egestas natis. Duis massa elit, auctor non
+            .grid_4
+                .block1
+                    time(datetime='2014-01-01')
+                        | 15
+                        span Feb
+                    .extra_wrapper
+                        .text1.col1
+                            a(href='#') uamnibh Edeto
+                        | Ros convallisumsan. Maecenas vehicula egestas venenatis. Duis massa elit, auctor non
+
+block script
+    script.
+        window.onload = function() { 
+            $('body').addClass('page1')
+            $('body').attr('id','top');
+            }
+        $(document).ready(function(){
+            jQuery('#camera_wrap').camera({
+                loader: false,
+                pagination: false ,
+                minHeight: '444',
+                thumbnails: false,
+                height: '48.375%',
+                caption: true,
+                navigation: true,
+                fx: 'mosaic'
+            });
+                /*carousel*/
+            var owl=$("#owl");
+                owl.owlCarousel({
+                items : 2, //10 items above 1000px browser width
+                itemsDesktop : [995,2], //5 items between 1000px and 901px
+                itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+                itemsTablet: [700, 2], //2 items between 600 and 0
+                itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+                navigation : true,
+                pagination : false
+                });
+            $().UItoTop({ easingType: 'easeOutQuart' });
+            });
+
+            $(function (){
+                $('#bookingForm').bookingForm({
+                    ownerEmail: '#'
+                });
+            })
+            $(function() {
+                $('#bookingForm input, #bookingForm textarea').placeholder();
+            });

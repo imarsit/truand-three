@@ -1,0 +1,81 @@
+extends layout
+
+block vars
+    - let title = '旅游网'
+
+block content
+
+    .content
+        .ic More Website Templates @ moobnn.com - February 10, 2014!
+        .container_12
+            .grid_5
+                h3 联系信息
+                .map
+                    p
+                        | TimPrimeMunter为其提供24/7个支持
+                        span.col1
+                            a(href='http://www.moobnn.com/website-templates.php', rel='nofollow') 优质产品
+                        | . 免费赠送没有它。
+                    p
+                        | 如果您对定制的自由主题的定制有任何疑问，请
+                        span.col1
+                            a(href='http://www.templatetuning.com/', rel='nofollow') 联系我们
+                        | 我们回给予您帮助
+                    .clear
+                    figure
+                        iframe(src='http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Brooklyn,+New+York,+NY,+United+States&aq=0&sll=37.0625,-95.677068&sspn=61.282355,146.513672&ie=UTF8&hq=&hnear=Brooklyn,+Kings,+New+York&ll=40.649974,-73.950005&spn=0.01628,0.025663&z=14&iwloc=A&output=embed')
+                    address
+                        dl
+                            dt
+                                | The Company Name Inc. 
+                                br
+                                | 8901 Marmora Road,
+                                br
+                                | Glasgow, D04 89GR.
+                            dd
+                                span Freephone:
+                                | +1 800 559 6580
+                            dd
+                                span Telephone:
+                                | +1 800 603 6035
+                            dd
+                                span FAX:
+                                | +1 800 889 9898
+                            dd
+                                | E-mail: 
+                                a.col1(href='#') mail@demolink.org
+            .grid_6.prefix_1
+                h3 保持联系
+                form#form
+                    .success_wrapper
+                        .success-message 提交的联系表格
+                    label.name
+                        input(type='text', placeholder='姓名:', data-constraints='@Required @JustLetters')
+                        span.empty-message *此字段必填。
+                        span.error-message *这不是有效的名称。
+                    label.email
+                        input(type='text', placeholder='邮箱:', data-constraints='@Required @Email')
+                        span.empty-message *此字段必填。
+                        span.error-message *这不是有效的邮箱。
+                    label.country
+                        input(type='text', placeholder='国家:', data-constraints='@Required @JustLetters')
+                        span.empty-message *此字段必填。
+                        span.error-message *这不是有效的手机号。
+                    label.message
+                        textarea(placeholder='信息:', data-constraints='@Required @Length(min=20,max=999999)')
+                        span.empty-message *此字段必填。
+                        span.error-message *消息太短了。
+                    div
+                        .clear
+                        .btns
+                            a.btn(href='#', data-type='reset') 清除
+                            a.btn(href='#', data-type='submit') 提交
+
+
+block script
+    script.
+        $(function (){
+            $('#bookingForm').bookingForm({
+            ownerEmail: '#'
+            });
+        })
