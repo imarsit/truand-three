@@ -1074,6 +1074,11 @@ header h1 a {
 header h1 a img {
   display: block;
 }
+@media screen and (max-width: 768px) {
+  header h1 a img {
+    width: 100px;
+  }
+}
 /**Content**/
 .content {
   background-color: #fff;
