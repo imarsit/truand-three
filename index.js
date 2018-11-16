@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
 	// 模版标识
 	name: 'truand-three',
 	// 模版引擎
@@ -11,7 +11,7 @@ module.exports = {
 			// 路径
 			path: '/',
 			// 预览图
-			thumbnail: 'home.png',
+			thumbnail: 'about.png',
 		},
 		{
 			name: '特别优惠',
